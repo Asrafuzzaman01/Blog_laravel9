@@ -9,6 +9,12 @@ Vue.use(VueRouter)
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+
+const routes = [
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+]
+
 const router = VueRouter({
     routes, // short for `routes: routes`
 })
@@ -16,7 +22,7 @@ const router = VueRouter({
 
 const app= new Vue({
 
-el:'#app',
+el:'.app',
 
 router
 
